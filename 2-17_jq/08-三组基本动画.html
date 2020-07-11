@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 400px;
+				height: 400px;
+				background-color: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="显示" />
+		<input type="button" name="" id="" value="隐藏" />
+		<div id="">
+			
+		</div>
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("input").eq(0).click(function(){
+					//show不传参数,没有动画效果
+					//$("show").show();
+					
+					//show(speed)
+					//speed:动画的持续时间可以是毫秒值  还可以是固定字符串
+					//fast:200ms   normal:400ms    slow:600
+					//$("div").show("ddd");
+					//show([speed],[callback])
+					
+					$("div").show(1000,function(){
+						console.log("哈哈，动画执行完成啦");
+					});
+				});
+				$("input").eq(1).click(function(){
+					$("div").hide();
+				});
+			});
+		</script>
+	</body>
+</html>

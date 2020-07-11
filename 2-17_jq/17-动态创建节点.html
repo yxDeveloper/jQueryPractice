@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 400px;
+				height: 400px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+// 				var box = document.getElementById("box");
+// 				var a = document.createElement("a");
+// 				box.appendChild(a);
+// 				a.setAttribute("href","http://jd.com");
+// 				a.setAttribute("target","_blank");
+// 				a.innerHTML = "京东牛的比";
+
+					$("#box").append('<a href="http://jd.com" target="_blank">京东牛了个逼了</a>');
+			});
+		</script>
+	</body>
+</html>

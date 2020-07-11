@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+	</head>
+	<body>
+		<!-- 样式：在style里面写的，用css来操作 -->
+		<!--属性：在标签里面写的，用attr方法操作 -->
+		<img src="04.gif" alt="突破了" title="对对对">
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//用法和css一样
+				//设置单个属性
+				//attr(name，value)
+				//$("img").attr("alt","图破了");
+				//$("img").attr("title","错错错错");
+				
+				//设置多个属性
+// 				$("img").attr({
+// 					alt:"图破了",
+// 					title:"错错错",
+// 					aa:"bb"
+// 				});
+
+
+					console.log($("img").attr("alt"));
+			});
+		</script>
+	</body>
+</html>

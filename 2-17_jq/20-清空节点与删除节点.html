@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 400px;
+				height: 400px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>1111</p>
+			<p>2222</p>
+		</div>
+		<p class="des">我是外面的p元素</p>
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".des").click(function(){
+					alert("hehe");
+				})
+				
+				//可以清空一个元素的内容
+				
+				//内存泄漏
+				// $("div").html("");
+				//清理门户 ()
+				// $("div").empty();
+				// $("div").remove();
+				
+				//false:不传参数也是深度复制,不会复制事件
+				//true:也是深度复制,会复制事件
+				$(".des").clone(false).appendTo("div");
+			});
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				position: absolute;
+			}
+			#box2 {
+				background-color: blue;
+				margin-top: 150px;
+			}
+			#box3 {
+				background-color: yellowgreen;
+				margin-top: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="开始">
+		<input type="button" value="开始">
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="box3"></div>
+		
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("input").eq(0).click(function(){
+					
+					//第一个参数: 对象,里面可以传需要动画的样式
+					//第二个参数: speed 动画的执行时间
+					//第三个参数: 动画的执行效果
+					//第四个参数: 回调函数
+					$("#box1").animate({left:800},8000);
+					//swing:秋千  摇摆
+					$("#box2").animate({left:800},8000,"swing");
+					//linear:线性 匀速
+					$("#box3").animate({left:800},8000,"linear",function(){
+						console.log("hahaha");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
