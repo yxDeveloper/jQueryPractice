@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 400px;
+				height: 60px;
+				background-color: pink;
+				text-align: center;
+				text-height: 60px;
+				font-size: 30px;
+				margin: 100px auto;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div>这是一个提示消息</div>
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").fadeIn(1000).delay(2000).fadeOut(1000);
+			});
+			
+		</script>
+	</body>
+</html>

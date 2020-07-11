@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<p>1234</p>
+		
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.bgColor.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").bgColor("red").width(400);
+			});
+		</script>
+	</body>
+</html>

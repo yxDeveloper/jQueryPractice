@@ -1,0 +1,35 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Title</title>
+		</head>
+		<body>
+			<input type="button" name="" id="btn" value="呵呵" />
+			<input type="text" name="" id="txt" value="洋酒" />
+			
+			<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				$(function(){
+// 					console.log($("#btn").val());
+// 					$("#btn").val("哈哈");
+// 					console.log($("#btn").attr("value"));
+// 					
+// 					$("#txt").val("123");
+// 					console.log($("#txt").val());
+						$("#txt").focus(function(){
+							//如果是默认值,清空内容
+							if($(this).val() === "洋酒"){
+								$(this).val("");
+							}
+						});
+						$("#txt").blur(function(){
+							if($(this).val() === ""){
+								$(this).val("洋酒");
+							}
+						});
+				});
+			</script>
+		</body>
+	</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="触发" />
+		<p>我是一个p标签</p>
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("p").on("click",function(){
+					alert("呵呵");
+				})
+				//toggle: 切换 trigger: 触发
+				$("#btn").on("click",function(){
+					//触发p元素的点击事件
+					$("p").click();
+					$("p").trigger("click");
+					// $("p").toggle("click");
+				})
+			});
+		</script>
+	</body>
+</html>
